@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>JS-404</title>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/main.css"/>
+		<script>
+			var clickOrTouchDown = "mousedown";
+			var clickOrTouchUp = "mouseup";
+			var desktop = true;
+			if ((navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPod") != -1) || (navigator.platform.indexOf("iPad") != -1)) {
+				clickOrTouchDown = "touchstart";
+			    clickOrTouchUp = "touchend";
+			    desktop = false;
+				document.write('<meta name="apple-mobile-web-app-capable" content="yes"/>');
+				document.write('<meta name="apple-mobile-web-app-status-bar-style" content="black" />');
+			} else {
+				document.write('<link rel="stylesheet" href="css/heavy.css"/>');
+			}
+		</script>
+		<script src="js/empty.js"></script>
+		<script src="js/storage.js"></script>
+		<script src="js/buffer-loader.js"></script>
+		<script src="js/app.js"></script>
+		<meta name="viewport" content="width=956, user-scalable=no">
+	</head>
+	<body>
+
+
+	<button id="toggleKeyBind" class="floatRight">Show key bindings</button>
+	<h1><a href="http://www.erikosterberg.com/js404">JS-404</a>&nbsp;<span><span>WebKit</span>&nbsp;RHYTHM COMPOSER</span></h1>
+
+	<p class="clear"></p>
+
+	<div id="soundPads">
+	<div class="soundPad"><div class="keyBind" style="visibility: hidden">a</div>
+		<div class="drumPad">House kick</div>
+		<p>filter</p>
+		<input class="filter" type="range" min="0" max="1" step="0.01" value="1">
+		<p>volume</p>
+		<input class="volume" type="range" min="0" max="1" step="0.01" value="0.5">
+		<p>pan</p>
+		<input class="pan" type="range" min="-3" max="3" step="0.01" value="0">
+	</div>
+	<div class="soundPad"><div class="keyBind">s</div>
+		<div class="drumPad">House snare</div>
+		<p>filter</p>
+		<input class="filter" type="range" min="0" max="1" step="0.01" value="1">
+		<p>volume</p>
+		<input class="volume" type="range" min="0" max="1" step="0.01" value="0.5">
+		<p>pan</p>
+		<input class="pan" type="range" min="-3" max="3" step="0.01" value="0">
+	</div>
+	<div class="soundPad"><div class="keyBind">d</div>
+		<div class="drumPad">Hand clap</div>
+		<p>filter</p>
+		<input class="filter" type="range" min="0" max="1" step="0.01" value="1">
+		<p>volume</p>
+		<input class="volume" type="range" min="0" max="1" step="0.01" value="0.5">
+		<p>pan</p>
+		<input class="pan" type="range" min="-3" max="3" step="0.01" value="0">
+	</div>
+	<div class="soundPad"><div class="keyBind">f</div>
+		<div class="drumPad">Closed hi-hat</div>
+		<p>filter</p>
+		<input class="filter" type="range" min="0" max="1" step="0.01" value="1">
+		<p>volume</p>
+		<input class="volume" type="range" min="0" max="1" step="0.01" value="0.5">
+		<p>pan</p>
+		<input class="pan" type="range" min="-3" max="3" step="0.01" value="0">
+	</div>
+	<div class="soundPad"><div class="keyBind">g</div>
+		<div class="drumPad">Open hi-hat</div>
+		<p>filter</p>
+		<input class="filter" type="range" min="0" max="1" step="0.01" value="1">
+		<p>volume</p>
+		<input class="volume" type="range" min="0" max="1" step="0.01" value="0.5">
+		<p>pan</p>
+		<input class="pan" type="range" min="-3" max="3" step="0.01" value="0">
+	</div>
+	<div class="soundPad"><div class="keyBind">h</div>
+		<div class="drumPad">909 ride cymbal</div>
+		<p>filter</p>
+		<input class="filter" type="range" min="0" max="1" step="0.01" value="1">
+		<p>volume</p>
+		<input class="volume" type="range" min="0" max="1" step="0.01" value="0.5">
+		<p>pan</p>
+		<input class="pan" type="range" min="-1" max="1" step="0.01" value="0">
+	</div>
+	</div>
+
+
+		<div id="sequencer">
+			<div class="keyBind"><p>1</p>
+			<p>2</p>
+			<p>3</p>
+			<p>4</p>
+			<p>5</p>
+			<p>6</p>
+			<p>7</p>
+			<p>8</p>
+			<p>q</p>
+			<p>w</p>
+			<p>e</p>
+			<p>r</p>
+			<p>t</p>
+			<p>y</p>
+			<p>u</p>
+			<p>i</p></div>
+		</div>
+		<div id="playField floatLeft">
+	<p>Pad <span id="padNum">1</span>:&nbsp;&nbsp;<select id="soundSelect" class="clear">
+			<optgroup label="Bass drums">
+			<option value="kick808">808 Kick</option>
+			<option value="housekick" selected>House kick</option>
+			<option value="deepkick">Deep kick</option>
+			</optgroup>
+			<optgroup label="Hi-hats">
+			<option value="chh909">Closed 909 hi-hat</option>
+			<option value="chh">Closed hi-hat</option>
+			<option value="ohh909">Open 909 hi-hat</option>
+			<option value="ohh">Open hi-hat</option>
+			</optgroup>
+			<optgroup label="Cymbals">
+			<option value="ride808">808 ride cymbal</option>
+			<option value="ride909">909 ride cymbal</option>
+			<option value="crash909">909 crash</option>
+			</optgroup>
+			<optgroup label="Snares and claps">
+			<option value="clap808">808 clap</option>
+			<option value="clap909">909 clap</option>
+			<option value="handclap">Hand clap</option>
+			<option value="housesnare">House snare</option>
+			<option value="snare808">808 snare</option>
+			</optgroup>
+			<optgroup label="Other">
+			<option value="acousticrim">Acoustic rim shot</option>
+			<option value="analogrim">Analog rim shot</option>
+			<option value="conga1">Conga 1</option>
+			<option value="conga2">Conga 2</option>
+			<option value="conga3">Conga 3</option>
+			</optgroup>
+		</select></p>
+		<div id="play" class="floatLeft">&#9658;</div><div class="keyBind floatLeft">&nbsp;space</div>
+			<div id="tempoContainer" class="clearLeft">
+		<span class="keyBind">left&nbsp;</span><input id="tempo" type="range" min="60" max="180" value="120"><span class="keyBind">&nbsp;right</span>
+			<p>Tempo: <span id="tempoTxt">120</span>&nbsp;BPM</p>
+			</div>
+		</div>
+
+		<br>
+		<select id="storage">
+			<option>New session</option>
+		</select>
+		<br>
+		<button id="load">Load</button><button id="save">Save</button><button id="delete">Delete</button>
+		<p class="clear"></p>
+		<p class="sign"><a href="http://www.erikosterberg.com">Erik Österberg</a>&nbsp;&nbsp;2013</p>
+
+	</body>
+</html>

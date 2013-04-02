@@ -1,0 +1,139 @@
+body {
+	-webkit-user-select:none;
+	-webkit-text-size-adjust: 100%;
+	background: whitesmoke;
+	font-weight: 100;
+	cursor: default;
+	margin: 0 auto;
+	padding: 0 4px;
+	width: 948px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+}
+
+h1 {
+	margin: 1px 0 -7px;
+	font-size: 2.3em;
+	font-weight: 300;
+}
+
+h1 span {
+	font-size: 0.6em;
+}
+h1 span span {
+	font-size: 0.8em;
+}
+.soundPad, p {
+	font-size: 0.7em;
+}
+.soundPad input {
+	display: block;
+}
+p {
+	margin: 0;
+}
+.drumPad {
+	padding: 60px 0;
+	width: 150px;
+	margin: 0 4px 3px;
+	text-align: center;
+	background: #D3D3D3;
+	border-radius: 5px;
+}
+.soundPad {
+	float: left;
+	margin-bottom: 15px;
+}
+input[type="range"] {
+	-webkit-appearance: none;
+	width: 150px;
+	background-color: #ECECEC;
+}
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance:	none;
+	width: 10px;
+	height: 24px;
+	border:0;
+	border-radius: 3px / 6px ;
+	background: #D3D3D3;
+}
+
+select {
+	width: 143px;
+}
+.keyBind {
+	visibility: hidden;
+}
+.soundPad .keyBind{
+	text-align: center;
+}
+.keyBind.floatLeft {
+	font-size: 0.7em;
+	margin-top: 15px;
+}
+span.keyBind {
+	font-size: 0.7em;
+	vertical-align: middle;
+}
+#sequencer .keyBind p {
+	text-align: center;
+	float: left;
+	margin: 3px;
+	width: 40px;
+	height: 10px;
+	border-radius: 5px;
+}
+
+.seqLine div {
+	float: left;
+	color: rgba(255, 255, 255, 0);
+	background: #D3D3D3;
+	margin: 3px;
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+}
+#playField {
+	width: 200px;
+}
+#play {
+	clear: left;
+	color: #CECECE;
+	font-size: 2.5em;
+	width: 36px;
+}
+#tempoContainer {
+	text-align: center;
+}
+#tempo {
+	margin-top: -3px;
+}
+#sequencer {
+	float: right;
+}
+p.sign {
+	margin-top: 11px;
+	text-align: center;
+}
+a {
+	text-decoration: none;
+	color: black
+}
+div.btnDown {
+	background: #00ADFF;
+}
+#play.btnDownTxt {
+	color: #00ADFF;
+}
+.floatLeft {
+	float: left;
+}
+.floatRight {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+.clearLeft {
+	clear: left;
+}

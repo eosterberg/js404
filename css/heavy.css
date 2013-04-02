@@ -1,0 +1,120 @@
+.drumPad {
+	padding: 60px 0;
+	width: 150px;
+	margin: 0 4px 3px;
+	text-align: center;
+	background-image: linear-gradient(bottom, rgb(214,214,214) 0%, rgb(204,204,204) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(204,204,204) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(204,204,204) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(204,204,204) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(204,204,204) 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(214,214,214)),
+		color-stop(1, rgb(204,204,204))
+		);
+	border-radius: 5px;
+	box-shadow: 0 1px 2px #5A5A5A;
+}
+
+/* input type=range style borrowed from: http://lab.simurai.com/umbrui/ - thank you!! */
+input[type="range"] {
+	-webkit-appearance: none;
+	outline: none;
+	width: 150px;
+	height: 1px;
+	margin: 4px auto 13px;
+	border-radius: 1px;
+	position: relative;
+	background-color: #A3A3A3;
+	-webkit-background-clip: padding-box;
+	border: 0;
+	border-radius: 2px;
+	border-bottom: 1px solid #C7C7C7;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance:	none;
+	position: relative;
+	z-index: 		1;
+
+	width: 10px;
+	height: 25px;
+	border-radius: 3px / 6px ;
+
+	background-image: -webkit-gradient( linear, left top, right top,
+		color-stop( 0, 		hsl(0,0%,15%) ),
+		color-stop( .16, 	hsl(0,0%,22%) ),
+		color-stop( .18, 	hsl(0,0%,30%) ),
+		color-stop( .2, 	hsl(0,0%,26%) ),
+
+		color-stop( .42,	hsl(200,60%,30%) ),
+		color-stop( .44,	hsl(200,0%,15%) ),
+		color-stop( .46,	hsl(200,100%,50%) ),
+		color-stop( .54,	hsl(200,100%,50%) ),
+		color-stop( .56,	hsl(200,0%,15%) ),
+		color-stop( .58,	hsl(200,60%,30%) ),
+
+		color-stop( .8,		hsl(0,0%,26%) ),
+		color-stop( .82,	hsl(0,0%,30%) ),
+		color-stop( .84,	hsl(0,0%,22%) ),
+		color-stop( 1, 		hsl(0,0%,15%) )
+		);
+
+	-webkit-box-shadow:
+
+	inset hsla(0,0%,100%,.15) 0 1px 0,
+
+	hsl(0,0%,17%) 0 2px 0,
+	hsl(0,0%,15%) 0 4px 0,
+	hsl(0,0%,13%) 0 6px 0,
+
+	rgba(0,0,0,.5) 0 8px 5px;
+
+	-webkit-transform: translateY(-3px);
+	-webkit-box-reflect: 	below 0 -webkit-gradient(linear, left top, left bottom,
+		from(transparent), color-stop(0.6, transparent), to( rgba(255,255,255,0.15) ));
+}
+
+.seqLine div {
+	float: left;
+	color: rgba(255, 255, 255, 0);
+	background-image: linear-gradient(bottom, rgb(214,214,214) 0%, rgb(204,204,204) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(204,204,204) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(204,204,204) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(204,204,204) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(204,204,204) 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(214,214,214)),
+		color-stop(1, rgb(204,204,204))
+		);
+	margin: 3px;
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	box-shadow: 0 1px 2px #5A5A5A;
+}
+#play {
+	text-shadow: 0 1px 2px #5A5A5A;
+}
+div.btnDown {
+	background-image: linear-gradient(bottom, rgb(103,192,224) 0%, rgb(56,175,240) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(103,192,224) 0%, rgb(56,175,240) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(103,192,224) 0%, rgb(56,175,240) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(103,192,224) 0%, rgb(56,175,240) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(103,192,224) 0%, rgb(56,175,240) 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(103,192,224)),
+		color-stop(1, rgb(56,175,240))
+		);
+}
